@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   DESIGN SYSTEM TOKENS — Light Cartoon Neo-Brutalist ("PhotoFiltr" style)
+   Typeface: Clash Grotesk Variable
+   ========================================================================== */
+@theme {
+  /* Brand */
+  --color-primary: #725feb;
+  --color-indigo: #725feb;   /* alias keep for existing refs */
+  --color-royal: #6248ff;    /* brighter accent */
+  --color-violet: #6f5ce5;   /* alias keep */
+  --color-lilac: #6a5fd6;    /* DARKENED so text-lilac is AA on white */
+
+  /* Sunset gradient stops */
+  --color-sunset: #ff4848;
+  --color-sunrise: #ff7448;
+  --color-warning: #ffe600;
+  --color-coral: #f0675b;
+
+  /* Pastel mesh card fills */
+  --color-blush: #ffb1a6;
+  --color-mint: #9ff5cf;
+  --color-pink: #ffbce2;
+  --color-orange: #f1ae5b;
+  --color-lemon: #adf05a;
+  --color-lavender: #d7d3ec;
+  --color-salmon: #f59797;
+
+  /* INVERTED neutrals: dark token names, light values */
+  --color-void: #fff5ec;     /* warm cream PAGE bg */
+  --color-paper: #ffffff;
+  --color-charcoal: #ffffff; /* card surface -> white */
+  --color-cloud: #1c1c1e;    /* headings (dark ink) */
+  --color-mist: #626970;     /* body text */
+  --color-graphite: #2f2f33; /* muted dark */
+  --color-fog: #f3f4f6;      /* grey surface */
+  --color-ash: #eceef2;      /* hairline border */
+  --color-ink: #000000;
+
+  /* HARD offset shadows (no blur) */
+  --shadow-glow: 6px 6px 0 0 #11121a;
+  --shadow-card: 6px 6px 0 0 #000000;
+  --shadow-hard: 6px 6px 0 0 #000000;
+  --shadow-hard-sm: 4px 4px 0 0 #000000;
+
+  /* Type */
+  --font-display: "Clash Grotesk Variable", "Clash Grotesk", sans-serif;
+
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-wiggle: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: var(--color-void);
+  color: var(--color-cloud);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-royal);
+  color: #fff;
+}
+
+/* visible keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--color-lilac);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* thin scrollbar to match light theme */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-fog); }
+::-webkit-scrollbar-thumb { background: var(--color-ink); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-royal); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   COMPONENT UTILITIES — Light Cartoon Neo-Brutalist
+   ========================================================================== */
+@layer components {
+  .neo-card {
+    border: 3px solid var(--color-ink);
+    border-radius: 10px;
+    box-shadow: 6px 6px 0 var(--color-ink);
+    background: #fff;
+  }
+  .neo-card-sm {
+    border: 2px solid var(--color-ink);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--color-ink);
+  }
+  .hard-shadow { box-shadow: 6px 6px 0 var(--color-ink); }
+  .hard-shadow-sm { box-shadow: 4px 4px 0 var(--color-ink); }
+  .bg-sunset {
+    background: linear-gradient(135deg, #ff7448, #ff4848 50%, #6248ff);
+  }
+  .text-sunset {
+    background: linear-gradient(135deg, #ff7448, #ff4848 50%, #6248ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 2px var(--color-ink);
+    color: transparent;
+  }
+  .rotate-stamp {
+    transform: rotate(-8deg);
+  }
+}
