@@ -37,8 +37,13 @@ export default function About() {
           <div className="absolute inset-0 rounded-[2.5rem] border-2 border-dashed border-ink/30" />
           <div className="relative flex h-full items-center justify-center overflow-hidden rounded-[2.5rem] border-2 border-ink bg-white shadow-hard">
             <div className="absolute inset-0 bg-noise" />
-            <div className="flex size-40 items-center justify-center rounded-full bg-sunset font-display text-6xl font-bold text-white border-2 border-ink shadow-hard-sm">
-              R
+            <div className="flex size-40 items-center justify-center overflow-hidden rounded-full border-2 border-ink bg-sunset shadow-hard-sm">
+              <img
+                src="/images/profile/profile.webp"
+                alt="Muhammad Reza Alif Firdaus"
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
             </div>
             <span className="rotate-stamp absolute left-6 top-6 size-16 rounded-full bg-lemon border-2 border-ink" />
             <span className="rotate-stamp absolute right-6 bottom-24 size-12 rounded-xl bg-pink border-2 border-ink" />
