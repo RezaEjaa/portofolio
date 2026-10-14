@@ -64,9 +64,15 @@
   0%, 100% { transform: rotate(-8deg); }
   50% { transform: rotate(8deg); }
 }
+@keyframes pet-walk {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  25% { transform: translateY(-3px) scaleY(1.04); }
+  75% { transform: translateY(2px) scaleY(0.96); }
+}
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px; /* ~20% bigger than default 16px — semua rem ikut */
 }
 
 body {
@@ -74,6 +80,7 @@ body {
   background-color: var(--color-void);
   color: var(--color-cloud);
   -webkit-font-smoothing: antialiased;
+  padding-bottom: 6rem; /* space for bottom pet bar */
 }
 
 ::selection {

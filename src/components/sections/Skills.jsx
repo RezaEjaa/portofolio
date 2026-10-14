@@ -1,6 +1,6 @@
 import * as Icons from "lucide-react";
 import { motion } from "framer-motion";
-import { SKILLS } from "../../data/skills";
+import { SKILLS } from "../../data/skills.js";
 import { type } from "../../utils/typography";
 import { cn } from "../../utils/cn";
 import { fadeUp, staggerContainer, viewportOnce } from "../../utils/motion";
@@ -38,6 +38,9 @@ export default function Skills() {
                   </div>
                   <h3 className={cn(type.h3, "text-cloud")}>{group.category}</h3>
                 </div>
+                {group.description && (
+                  <p className={cn(type.bodySm, "mt-3 text-mist")}>{group.description}</p>
+                )}
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <li

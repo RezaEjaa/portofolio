@@ -65,7 +65,7 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
             <Button as="a" href="#contact" size="md">
-              Let&apos;s Talk
+              Let&apos;s Connect
             </Button>
           </div>
 
@@ -104,7 +104,7 @@ export default function Navbar() {
                 </a>
               ))}
               <Button as="a" href="#contact" onClick={() => setOpen(false)} className="mt-2 w-full">
-                Let&apos;s Talk
+                Let&apos;s Connect
               </Button>
             </nav>
           </motion.div>

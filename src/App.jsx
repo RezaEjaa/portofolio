@@ -4,6 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import ProjectDetail from "./pages/ProjectDetail";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

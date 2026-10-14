@@ -12,7 +12,7 @@ PhotoFiltr's design system embodies a modern, playful aesthetic centered on AI-p
 - Generous whitespace and breathing room in layouts
 - Geometric, composed imagery with clear before/after contrasts
 - Accessible color palette with semantic red accents for warnings
-- Mix of filled and transparent component states
+- Mix of filled and transparent component states 
 
 ## 2. Color Palette & Roles
 

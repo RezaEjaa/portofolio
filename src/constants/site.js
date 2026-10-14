@@ -1,7 +1,7 @@
 export const SITE = {
-  name: "Rezz Dev",
-  role: "Frontend & Full Stack Web Developer",
-  tagline: "I design and build fast, modern websites that turn visitors into clients.",
+  name: "RezaDev",
+  role: "Software Development Student & Web Developer",
+  tagline: "Building, learning, and experimenting with technology—one project at a time.",
   email: "mrezaaliff@gmail.com",
   whatsapp: "https://wa.me/6289699676879",
   whatsappLabel: "0896-9967-6879",
@@ -14,10 +14,9 @@ export const SITE = {
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#projects" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Projects", href: "#projects" },
+  { label: "Journey", href: "#journey" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const SOCIAL_LINKS = [
